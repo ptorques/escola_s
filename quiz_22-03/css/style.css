@@ -1,0 +1,93 @@
+body{
+    margin: 0;
+    font-family: Verdana;
+    background-color: white;
+    background: url("https://langleygroup.com.au/wp-content/uploads/Purple-world-map.png");
+    background-size: 100%;
+    background-repeat: repeat-x;
+    background-position: center;
+}
+header{
+    background-color: rgb(196, 117, 236);
+    padding: 50px;
+}
+header > h1{
+    margin: auto;
+    font-family: Georgia, "Times New Roman", serif;
+    color: #000000;
+    text-align: center;
+    font-size: 80px;
+}
+footer{
+    background-color: rgb(196, 117, 236);
+    margin-top: 20px;
+    padding: 20px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+.outside{
+    width: 50%;
+    height: 300px;
+    background-color: rgb(196, 117, 236);
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 20px;
+    padding: 8px;
+    border: 2px solid;
+    position: static;
+    display: table;
+}
+.inside {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: auto;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.inside > label {
+    font-size: 20px;
+}
+.inside > select {
+    font-size: 15px;
+}
+.inside > button {
+    background-color: #a30000; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.inside > select {
+    background-color: #525354; 
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 32px;
+    text-align: none;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+.inside > button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    cursor: pointer;
+}
+.inside > button:active {
+    box-shadow: none;
+    cursor: pointer;
+}
+.outsideimg{
+    width: 50%;
+    height: 300px;
+    background-color: rgb(196, 117, 236);
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border: 2px solid;
+    position: static;
+    display: table;
+}
