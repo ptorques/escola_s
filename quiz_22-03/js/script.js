@@ -1,19 +1,27 @@
-let question1 = document.querySelector("#pergunta1")
-let question2 = document.querySelector("#pergunta2")
-let question3 = document.querySelector("#pergunta3")
-let question4 = document.querySelector("#pergunta4")
-let question5 = document.querySelector("#pergunta5")
-let question6 = document.querySelector("#pergunta6")
-let question7 = document.querySelector("#pergunta7")
-let question8 = document.querySelector("#pergunta8")
-let question9 = document.querySelector("#pergunta9")
-let question10 = document.querySelector("#pergunta10")
-var paragrafo = document.querySelector("#pontuação")
+var question1 = document.getElementById("pergunta1")
+var question2 = document.getElementById("pergunta2")
+var question3 = document.getElementById("pergunta3")
+var question4 = document.getElementById("pergunta4")
+var question5 = document.getElementById("pergunta5")
+var question6 = document.getElementById("pergunta6")
+var question7 = document.getElementById("pergunta7")
+var question8 = document.getElementById("pergunta8")
+var question9 = document.getElementById("pergunta9")
+var question10 = document.getElementById("pergunta10")
+var paragrafo = document.getElementById("pontuação")
 
-function setPontos(){
+function setPontos() {
     let resposta1 = question1.value
     let resposta2 = question2.value
     let resposta3 = question3.value
+    let resposta4 = question4.value
+    let resposta5 = question5.value
+    let resposta6 = question6.value
+    let resposta7 = question7.value
+    let resposta8 = question8.value
+    let resposta9 = question9.value
+    let resposta10 = question10.value
+
     let pontos = 0
     let frase = ""
 
@@ -26,19 +34,57 @@ function setPontos(){
     if (resposta3 === "Liechtenstein") {
         pontos++
     }
-            
-    if (pontos === 0) {
+    if (resposta4 === "Ásia") {
+        pontos++
+    }
+    if (resposta5 === "Grã-Bretanha") {
+        pontos++
+    }
+    if (resposta6 === "7") {
+        pontos++
+    }
+    if (resposta7 === "Tuvalu") {
+        pontos++
+    }
+    if (resposta8 === "República Popular Democrática da Coréia") {
+        pontos++
+    }
+    if (resposta9 === "Iugoslávia") {
+        pontos++
+    }
+    if (resposta10 === "Niger") {
+        pontos++
+    }
+
+    if (pontos < 4) {
         frase = "Boa sorte da próxima vez!"
     }
-    else if (pontos === 1) {
+    else if (pontos > 3 && pontos < 7) {
         frase = "Chegando lá!"
     }
-    else if (pontos === 2) {
+    else if (pontos > 6 && pontos < 10) {
         frase = "Nada mal!"
     }
-    else if (pontos === 3) {
+    else if (pontos === 10) {
         frase = "Muito bom!"
     }
-            
-    paragrafo.innerText = "Você conseguiu: " + pontos +"/10\n" + frase
+
+    console.log(pontos);
+
+    paragrafo.innerText = "Você conseguiu: " + pontos + "/10\n" + frase
+}
+
+function switchmenu(x) {
+    if (x == 1) {
+        document.getElementById("quizswitch").className = "active"
+        document.getElementById("sobreswitch").className = "inactive"
+        document.getElementById("quiz").className = "displayed"
+        document.getElementById("sobre").className = "undisplayed"
+    }
+    else {
+        document.getElementById("sobreswitch").className = "active"
+        document.getElementById("quizswitch").className = "inactive"
+        document.getElementById("sobre").className = "displayed"
+        document.getElementById("quiz").className = "undisplayed"
+    }
 }
