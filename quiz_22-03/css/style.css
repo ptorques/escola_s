@@ -5,12 +5,15 @@ body {
 }
 
 header {
-    background-color: rgb(196, 117, 236);
-    padding: 50px;
+    background-color: white;
+    background: url("http://www.clker.com/cliparts/t/I/G/9/x/B/purple-world-map.svg");
+    background-repeat: repeat-y;
+    background-position: center;
+    height: 600px;
     padding-bottom: 0px;
 }
 
-header>ul {
+header>div>ul {
     text-align: center;
     list-style-type: none;
     margin: 0px;
@@ -19,21 +22,22 @@ header>ul {
     position: static;
 }
 
-header>ul>li {
+header>div>ul>li {
     display: inline;
 }
 
-header>ul>li>button {
-    background-color: rgb(196, 117, 236);
-    outline: none;
+header>div>ul>li>button {
+    background-color: rgb(184, 121, 252);
+    outline: solid;
+    outline-color: black;
     padding: 20px;
-    text-decoration: none;
+    margin: 5px;
     color: rgb(0, 0, 0);
     border-radius: 5px;
     border-style: none;
 }
 
-header>ul>li button:hover:not(.active) {
+header>div>ul>li button:hover:not(.active) {
     background-color: rgb(150, 89, 180);
     cursor: pointer;
 }
@@ -48,7 +52,7 @@ header>ul>li button:hover:not(.active) {
     display: none;
 }
 
-header>h1 {
+header>div>h1 {
     margin: auto;
     font-family: Georgia, "Times New Roman", serif;
     color: #000000;
@@ -56,8 +60,12 @@ header>h1 {
     font-size: 80px;
 }
 
+header>div {
+    padding-top: 150px;
+}
+
 footer {
-    background-color: rgb(196, 117, 236);
+    background-color: rgb(184, 121, 252);
     margin-top: 20px;
     padding: 20px;
     color: rgb(0, 0, 0);
@@ -67,7 +75,7 @@ footer {
 .outside {
     width: 50%;
     height: 300px;
-    background-color: rgb(196, 117, 236);
+    background-color: rgb(184, 121, 252);
     border-radius: 20px;
     margin: auto;
     margin-top: 20px;
@@ -141,7 +149,7 @@ footer {
 .outsideimg {
     width: 50%;
     height: 300px;
-    background-color: rgb(196, 117, 236);
+    background-color: rgb(184, 121, 252);
     border-radius: 20px;
     margin: auto;
     margin-top: 20px;
@@ -149,4 +157,10 @@ footer {
     border: 2px solid;
     position: static;
     display: table;
+}
+
+form>input{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    padding: 10px;
 }

@@ -71,20 +71,39 @@ function setPontos() {
 
     console.log(pontos);
 
-    paragrafo.innerText = "Você conseguiu: " + pontos + "/10\n" + frase
+    paragrafo.innerText = "Pontuação de " + document.forms["form_nome"]["nome"].value + ": " + pontos + "/10\n" + frase
 }
 
 function switchmenu(x) {
     if (x == 1) {
         document.getElementById("quizswitch").className = "active"
         document.getElementById("sobreswitch").className = "inactive"
-        document.getElementById("quiz").className = "displayed"
+        if (document.getElementById("quiz").className == "undisplayed"){
+            document.getElementById("prompt").className = "displayed"
+        }
+        else {
+            document.getElementById("prompt").className = "undisplayed"
+        }
         document.getElementById("sobre").className = "undisplayed"
     }
     else {
         document.getElementById("sobreswitch").className = "active"
         document.getElementById("quizswitch").className = "inactive"
         document.getElementById("sobre").className = "displayed"
+        document.getElementById("prompt").className = "undisplayed"
         document.getElementById("quiz").className = "undisplayed"
+    }
+}
+
+function displayquiz() {
+    let x = document.forms["form_nome"]["nome"].value;
+    
+    if (x == "") {
+    alert("Nome deve ser preenchido")
+    }
+    else {
+        alert("Nome registrado")
+        document.getElementById("prompt").className = "undisplayed"
+        document.getElementById("quiz").className = "displayed"
     }
 }
