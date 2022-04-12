@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleçao de produtos</title>
+    <link rel="stylesheet" href="./css/case.css">
+</head>
+<body>
+    <header>
+        <h2>Seleçao de produtos</h2>
+    </header>
+
+    <div class="container">
+        <h3>Lista de produtos</h3>
+        <div class="seleçao">
+            <input type="radio" name="frutas" value="uva" onclick="search_price('uva')">
+            <label>Uva</label> <br>
+            <input type="radio" name="frutas" value="laranja" onclick="search_price('laranja')">
+            <label>Laranja</label> <br> 
+            <input type="radio" name="frutas" value="pera" onclick="search_price('pera')">
+            <label>Pera</label> <br>
+        </div>
+    </div>
+
+    <div class="container" id="div_produto">
+        <h3>Produto selecionado:</h3>
+        <p id="produto"></p>
+    </div>
+
+    <footer>
+        <ul>
+            <li>Mercadinho do Senai</li>
+            <li>So alimentos saudaveis</li>
+        </ul>
+    </footer>
+</body>
+<script src="./js/case.js"></script>
+</html>
