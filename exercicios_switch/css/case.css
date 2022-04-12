@@ -7,6 +7,8 @@ body {
 header {
     text-align: center;
     padding: 24px;
+    background-color: rgb(129, 0, 0);
+    color: white;
 }
 
 .container {
@@ -21,4 +23,10 @@ header {
 
 #div_produto {
     display: none;
+}
+
+footer {
+    background-color: rgb(129, 0, 0);
+    color: white;
+    padding: 24px;
 }
