@@ -16,3 +16,5 @@ function search_price(opcao) {
 
     document.getElementById("div_produto").style.display = "block"
 }
+
+
