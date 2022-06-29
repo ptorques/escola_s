@@ -1,4 +1,6 @@
 let usuarios = []
+let tbody = document.getElementById("tabela-usuarios")
+var index = 0
 
 const addUsuario = () => {
     let nome = document.getElementById("nome").value
@@ -26,19 +28,20 @@ const addUsuario = () => {
 }
 
 const listUsuarios = () => {
-    let tbody = document.getElementById("tabela-usuarios")
-    if (localStorage.getItem("usuarios") != null){
+    if (localStorage.getItem("usuarios") != null) {
         usuarios = JSON.parse(localStorage.getItem("usuarios"))
-        usuarios.forEach(usuario => {
-            let x = tbody.insertRow(0)
-            let y = x.insertCell(0)
-            let z = x.insertCell(1)
-            y.innerText = usuario[0]
-            z.innerText = usuario[1]
+        usuarios.forEach((usuario, index) => {
+            tbody.innerHTML += "<tr> <td>"+usuario[0]+"</td> <td>"+usuario[1]+"</td> <td><i onclick='deleteuser(index)' class='fa-solid fa-trash-can'></i></td> </tr>"
         });
     }
     else {
-        tbody.innerHTML += "<tr> <td>Vazio</td> <td>Vazio</td> </tr>"
+        tbody.innerHTML += "<tr> <td>Vazio</td> <td>Vazio</td> <td>Vazio</td> </tr>"
     }
 }
 
+const deleteuser = (indx) => {
+    usuarios = JSON.parse(localStorage.getItem("usuarios"))
+    let auxUsuarios = usuarios.filter((v, i) => {return i != indx})
+    localStorage.setItem("usuarios", JSON.stringify(auxUsuarios))
+    window.location.reload(true)
+}

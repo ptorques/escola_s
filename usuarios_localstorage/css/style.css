@@ -36,7 +36,7 @@ li a:hover {
 }
 
 .container {
-    min-width: 200px;
+    min-width: 70%;
     width: 20vw;
     margin: auto;
     color: white;
@@ -114,6 +114,16 @@ footer li {
     padding-top: 1rem;
     padding-bottom: 1rem;
     border: 2px solid grey;
+    max-width: 70px;
+    overflow: auto;
+}
+
+.list table td i{
+    font-size:x-large;
+}
+
+.list table td i:hover{
+    cursor: pointer;
 }
 
 .erro {
