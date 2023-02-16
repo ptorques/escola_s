@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Geografia</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header>
+        <div><h1>Quiz <br> Geografia</h1> <br>
+        <ul>
+            <li><button id="quizswitch" class="active" onclick="switchmenu(1)">Quiz</button></li>
+            <li><button id="sobreswitch" class="inactive" onclick="switchmenu(2)">Sobre</button></li>
+        </ul> <br></div>
+    </header>
+    <div id="prompt" class="displayed">
+        <div class="outside">
+            <div class="inside">
+                <h1>Informe seu nome</h1> <br>
+                <form name="form_nome" onsubmit="displayquiz();return false" method="POST">
+                    <input type="text" id="nome" name="nome" placeholder="Fujiro Nakombi" > <br> <br>
+                    <input type="submit" value="Prosseguir"> <br> <br>
+                </form> 
+            </div>
+        </div>
+    </div>
+    <div id="quiz" class="undisplayed">
+        <div class="outside">
+            <div class="inside">
+                <h1>Qual país faz fronteira terrestre com a Ucrânia?</h1> <br> <br>
+                <select id="pergunta1">
+                    <option value="--Selecione sua resposta--">--Selecione sua resposta--</option>
+                    <option value="Alemanha">Alemanha</option>
+                    <option value="Lituânia">Lituânia</option>
+                    <option value="Rússia">Rússia</option>
+                    <option value="México">México</option>
+                    <option value="Tchéquia">Tchéquia</option>
+                    <option value="Bulgária">Bulgária</option>
+                </select>
+            </div>
+        </div>
+        <div class="outside">
+            <div class="inside">
+                <h1>Qual o único país que faz <br> fronteira terrestre com o Haiti?</h1> <br> <br>
+                <select id="pergunta2">
+                    <option value="--Selecione sua resposta--">--Selecione sua resposta--</option>
+                    <option value="Brasil">Brasil</option>
+                    <option value="Jamaica">Jamaica</option>
+                    <option value="Bahamas">Bahamas</option>
+                    <option value="Costa Rica">Costa Rica</option>
+                    <option value="Dominica">Dominica</option>
+                    <option value="República Dominicana">República Dominicana</option>
+                </select>
+            </div>
+        </div>
+        <div class="outside">
+            <div class="inside">
+                <h1>Que país NÃO faz fronteira terrestre <br> com a França?</h1> <br> <br>
+                <select id="pergunta3">
+                    <option value="--Selecione sua resposta--">--Selecione sua resposta--</option>
+                    <option value="Mônaco">Mônaco</option>
+                    <option value="Liechtenstein">Liechtenstein</option>
+                    <option value="Brasil">Brasil</option>
+                    <option value="Luxemburgo">Luxemburgo</option>
+                    <option value="Espanha">Espanha</option>
+                    <option value="Itália">Itália</option>
+                </select>
+            </div>
+        </div>
+        <div class="outside">
+            <div class="inside">
+                <h1>Em qual continente se localiza a Geórgia?</h1> <br> <br>
+                <select id="pergunta4">
+                    <option value="--Selecione sua resposta--">--Selecione sua resposta--</option>
+                    <option value="Europa">Europa</option>
+                    <option value="América do Norte">América do Norte</option>
+                    <option value="Ásia">Ásia</option>
+                    <option value="América do Sul">América do Sul</option>
+                    <option value="Oceania">Oceania</option>
+                </select>
+            </div>
+        </div>
+        <div class="outsideimg">
+            <div class="inside">
+                <h1>Qual o nome do território destacado?</h1> <img
+                    src="https://sto-blog.s3.amazonaws.com/images/2016/07/14/gra-bretanha.png"> <br> <br>
+                <select id="pergunta5">
+                    <option value="--Selecione sua resposta--">--Selecione sua resposta--</option>
+                    <option value="Grã-Bretanha">Grã-Bretanha</option>
+                    <option value="Reino Unido">Reino Unido</option>
+                    <option value="Irlanda">Irlanda</option>
+                    <option value="Inglaterra">Inglaterra</option>
+                    <option value="Escócia">Escócia</option>
+                    <option value="Ilhas Britânicas">Ilhas Britânicas</option>
+                </select>
+            </div>
+        </div>
+        <div class="outside">
+            <div class="inside">
+                <h1>Quantos países estão na Península Arábica?</h1> <br> <br>
+                <select id="pergunta6">
+                    <option value="--Selecione sua resposta--">--Selecione sua resposta--</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                </select>
+            </div>
+        </div>
+        <div class="outside">
+            <div class="inside">
+                <h1>Qual país possui parte significativa de sua <br> economia proveniente da venda de domínios da
+                    internet?</h1> <br> <br>
+                <select id="pergunta7">
+                    <option value="--Selecione sua resposta--">--Selecione sua resposta--</option>
+                    <option value="Turquia">Turquia</option>
+                    <option value="Vanuatu">Vanuatu</option>
+                    <option value="Tuvalu">Tuvalu</option>
+                    <option value="Luxemburgo">Luxemburgo</option>
+                    <option value="Fiji">Fiji</option>
+                    <option value="Brunei">Brunei</option>
+                </select>
+            </div>
+        </div>
+        <div class="outside">
+            <div class="inside">
+                <h1>Qual o nome oficial da Coréia do Norte?</h1> <br> <br>
+                <select id="pergunta8">
+                    <option value="--Selecione sua resposta--">--Selecione sua resposta--</option>
+                    <option value="Coréia do Norte">Coréia do Norte</option>
+                    <option value="República Popular Democrática da Coréia">República Popular Democrática da Coréia
+                    </option>
+                    <option value="República da Coréia">República da Coréia</option>
+                    <option value="Itália">Itália</option>
+                    <option value="República Popular da Coréia">República Popular da Coréia</option>
+                    <option value="República Democrática da Coréia">República Democrática da Coréia</option>
+                </select>
+            </div>
+        </div>
+        <div class="outside">
+            <div class="inside">
+                <h1>Qual país NÃO fez parte da União Soviética?</h1> <br> <br>
+                <select id="pergunta9">
+                    <option value="--Selecione sua resposta--">--Selecione sua resposta--</option>
+                    <option value="Azerbaijão">Azerbaijão</option>
+                    <option value="Rússia">Rússia</option>
+                    <option value="Tajikistão">Tajikistão</option>
+                    <option value="Lituânia">Lituânia</option>
+                    <option value="Moldávia">Moldávia</option>
+                    <option value="Iugoslávia">Iugoslávia</option>
+                </select>
+            </div>
+        </div>
+        <div class="outside">
+            <div class="inside">
+                <h1>Qual o país com o MENOR IDH <br> do planeta (2020)?</h1> <br> <br>
+                <select id="pergunta10">
+                    <option value="--Selecione sua resposta--">--Selecione sua resposta--</option>
+                    <option value="Noruega">Noruega</option>
+                    <option value="Yemen">Yemen</option>
+                    <option value="Somália">Somália</option>
+                    <option value="Niger">Niger</option>
+                    <option value="Brasil">Brasil</option>
+                    <option value="Mongólia">Mongólia</option>
+                </select>
+            </div>
+        </div>
+        <div class="outside">
+            <div class="inside">
+                <h1>Pontuação Final</h1>
+                <button id="fim" onclick="setPontos()">Ver pontuação</button>
+                <h3 id="pontuação"></h3>
+            </div>
+        </div>
+    </div>
+    <div id="sobre" class="undisplayed">
+        <div class="outsideimg">
+            <div class="inside">
+                <h1>Sobre este quiz</h1> 
+                <img id="logo" src="https://escola-s.com/wp-content/themes/escola-s/img/logo/logo-escola-s-colorida.png"> <br> <br>
+                <div id="texto">Este projeto foi criado por Pedro Torques, aluno do 2º ano A do curso de desenvolvimento de sistemas no SESI/SENAI de Florianópolis. </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Obrigado por jogar!</p>
+    </footer>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
