@@ -28,7 +28,7 @@ let pessoa1 = new PessoaQ3("Rigoberto Almeida", 17)
 let pessoa2 = new PessoaQ3("Joana Ceres", 32)
 let maisVelho
 
-pessoa1.idade > pessoa2.idade ? maisVelho = pessoa1 : maisVelho = pessoa2
+pessoa1.idade > pessoa2.idade ? maisVelho = pessoa1 : pessoa1.idade < pessoa2.idade ? maisVelho = pessoa2 : maisVelho = "Idades Iguais"
 
 console.log(
     "\nQuestão 3.\n" + 
