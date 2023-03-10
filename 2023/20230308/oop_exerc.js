@@ -28,10 +28,8 @@ ninja.atirarShuriken = function() {
 
 // Questão 3
 
-let inimigo = {
-    nome: "Jonas",
-    vivo: true,
-}
+let inimigo = new Ninja("Jonas")
+inimigo.vivo = true
 
 ninja.atirarShuriken = function() {
     if (this.shuriken <= 0) {
