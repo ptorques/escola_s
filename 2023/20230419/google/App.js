@@ -1,13 +1,25 @@
-import { StyleSheet, Text, Image, View, TextInput, Pressable, Linking} from 'react-native';
+import {
+  StyleSheet,
+  Image,
+  View,
+  TextInput,
+} from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Image source={require("./assets/netflix.png")}/>
-      <TextInput style={StyleSheet.compose(styles.TextInput, {borderTopLeftRadius: 10, borderTopRightRadius: 10})} placeholder='Email'/>
-      <TextInput style={StyleSheet.compose(styles.TextInput, {borderBottomLeftRadius: 10, borderBottomRightRadius: 10})} placeholder='Password'/>
-      <Pressable style={styles.button}><Text style={{color: "#fff", fontSize: 20, fontWeight: 'bold'}}>Sign In</Text></Pressable>
-      <Text style={styles.passReset} onPress={() => {Linking.openURL('#');}}>Forgot your password?</Text>
+        <View style={styles.nav}>
+          <Image source={require('./assets/camera.png')} style={styles.icons} />
+          <Image
+            source={require('./assets/threedots.png')}
+            style={styles.icons}
+          />
+      </View>
+      <Image
+        source={require('./assets/640px-GoogleLogoSept12015.png')}
+        style={styles.logo}
+      />
+      <TextInput style={styles.TextInput} placeholder="Search or type URL" />
     </View>
   );
 }
@@ -15,32 +27,32 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#b4131d',
+    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
   TextInput: {
-    width: "70%",
-    backgroundColor: "#fff",
+    width: '90%',
+    backgroundColor: '#fff',
     padding: 15,
-    borderWidth: .5,
-    borderColor: "#808080",
+    borderWidth: 0.5,
+    borderColor: '#808080',
+    borderRadius: 5,
   },
-  button: {
-    width: "70%",
-    backgroundColor: 'transparent',
-    padding: 15,
-    borderWidth: 2,
-    borderColor: "#fff",
-    borderRadius: 10,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginTop: "10%"
+  logo: {
+    width: 250,
+    resizeMode: 'contain',
   },
-  passReset: {
-    color: "#FFF",
-    marginTop: "20%",
-    fontSize: 20,
-    fontWeight: 'bold',
-  }
+  icons: {
+    width: 40,
+    resizeMode: 'contain',
+    margin: 10,
+  },
+  nav: {
+    flexDirection: 'row',
+    height: '10%',
+    alignSelf: "flex-end",
+    position: "absolute",
+    top: 20
+  },
 });
