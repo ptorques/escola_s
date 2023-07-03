@@ -1,0 +1,25 @@
+{
+    "ceps":[
+        {
+            "codigo":"01234567",
+            "cidade":"Cuiabá",
+            "bairro":"Vila Rica",
+            "estado":"MT",
+            "pais":"Brasil"
+        },
+        {
+            "codigo":"18638136",
+            "cidade":"Curitiba",
+            "bairro":"Atuba",
+            "estado":"PR",
+            "pais":"Brasil"
+        },
+        {
+            "codigo":"91827341",
+            "cidade":"Florianópolis",
+            "bairro":"Canasvieiras",
+            "estado":"SC",
+            "pais":"Brasil"
+        }
+    ]
+}
